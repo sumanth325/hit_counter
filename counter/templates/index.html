@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Counter</title>
+    <link rel="stylesheet" types="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #container {
+            width: 600px;
+            padding: 15px;
+            background-color: rgba(255, 94, 0, 0.952);
+            border: 5px solid black;
+        }
+
+        #container * {
+            width: 30%;
+            margin: 10px auto;
+        }
+
+        .box {
+            width: 80px;
+            height: 80px;
+            display: inline-block;
+            background: white;
+            border: 10px solid black;
+            text-align: center;
+        }
+
+        .body {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class='box'>
+        <div id="container">
+            <h1>Counter:</h1>
+            <p> Thank you for visiting <h2>{{counter}}</h2> times </p>
+            <form action="/addtwo">
+                <input type="submit" value='+2'>
+            </form>
+            <form action="/reset">
+                <input type="submit" value='Reset 0'>
+            </form>
+            </form>
+            <form action="/resetone">
+                <input type="submit" value='Reset 1'>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
